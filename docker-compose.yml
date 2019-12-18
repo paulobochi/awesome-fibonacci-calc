@@ -12,7 +12,6 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile.dev
-    image: "paulomedeiros/fibonacci-server:development"
     volumes:
       - /app/node_modules
       - ./server:/app
@@ -31,7 +30,6 @@ services:
     build:
       context: ./worker
       dockerfile: Dockerfile.dev
-    image: "paulomedeiros/fibonacci-worker:development"
     volumes:
       - /app/node_modules
       - ./worker:/app
@@ -44,7 +42,6 @@ services:
     build:
       context: ./app
       dockerfile: Dockerfile.dev
-    image: "paulomedeiros/fibonacci-app:development"
     volumes:
       - /app/node_modules
       - ./app:/app
