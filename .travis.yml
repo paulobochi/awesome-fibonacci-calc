@@ -25,7 +25,7 @@ deploy:
   provider: elasticbeanstalk
   region: sa-east-1
   app: awesome-fibonacci-calc
-  env: AwesomeFibonacciCalc-env-1
+  env: AwesomeFibonacciCalc-prod
   bucket_name: elasticbeanstalk-sa-east-1-669887589980
   bucket_path: fibonacci
   on:
