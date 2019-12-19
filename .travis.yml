@@ -20,3 +20,16 @@ after_success:
   - docker push paulomedeiros88/fibonacci-nginx
   - docker push paulomedeiros88/fibonacci-server
   - docker push paulomedeiros88/fibonacci-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: sa-east-1
+  app: awesome-fibonacci-calc
+  env: AwesomeFibonacciCalc-env
+  bucket_name: elasticbeanstalk-sa-east-1-669887589980
+  bucket_path: fibonacci
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key:
+    secure: $AWS_SECRET_ACCESS_KEY
