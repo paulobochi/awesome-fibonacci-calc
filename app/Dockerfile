@@ -8,4 +8,5 @@ RUN yarn build
 FROM node:alpine
 WORKDIR /app
 COPY --from=builder /app/build ./
-CMD ["serve", "-s", "-p", "3000"]
+RUN yarn add global serve
+CMD ["yarn", "serve", "-s", "-p", "3000"]
