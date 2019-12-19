@@ -5,24 +5,28 @@
       "name": "app",
       "image": "paulomedeiros88/fibonacci-app:latest",
       "hostname": "app",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "api",
       "image": "paulomedeiros88/fibonacci-server:latest",
       "hostname": "api",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "worker",
       "image": "paulomedeiros88/fibonacci-worker:latest",
       "hostname": "worker",
-      "essential": false
+      "essential": false,
+      "memory": 128
     },
     {
       "name": "nginx",
       "image": "paulomedeiros88/fibonacci-nginx:latest",
       "essential": true,
+      "memory": 128,
       "portMappings": [
         {
           "hostPort": 80,
